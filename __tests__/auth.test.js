@@ -31,8 +31,8 @@ describe('app routes', () => {
   });
   it('can login a user with email and password', async() => {
     const user = await User.create({
-      email: 'test@test.com',
-      password: 'password'
+      email: 'eve@evie.com',
+      password: 'Puppies'
     });
 
     return request(app)
