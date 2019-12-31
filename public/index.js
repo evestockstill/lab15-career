@@ -1,3 +1,8 @@
+// import app from '../lib/app.js';
+// const app  = new App()
+// const element = app.renderDOM();
+// document.body.prepend(element);
+
 const root = document.getElementById('root');
 
 const displayForm = () => {
@@ -56,3 +61,4 @@ fetch('/api/v1/auth/verify', {
       displayForm();
     }
   });
+  
