@@ -55,23 +55,6 @@ describe('review routes', () => {
       });
   });
 
-  // it('gets all reviews', async() => {
-  //   const reviews = await Review.create([
-  //     { filmId: film._id, review: 'one good review', rating: 3 },
-  //     { filmId: film._id, review: 'two good review', rating: 2 },
-  //     { filmId: film._id, review: 'three good review', rating: 3 },
-  //     { filmId: film._id, review: 'four good review', rating: 5 },
-  //   ]);
-
-  //   return request(app)
-  //     .get('/api/v1/reviews')
-  //     .then(res => {
-  //       reviews.forEach(review => {
-  //         expect(res.body).toContainEqual(JSON.parse(JSON.stringify(review)));
-  //       });
-  //     });
-  // });
-
   it('gets an review by id', async() => {
     return request(app)
       .get(`/api/v1/reviews/${review._id}`)
