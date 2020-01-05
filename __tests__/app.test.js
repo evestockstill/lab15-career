@@ -78,7 +78,6 @@ describe('app routes', () => {
     const user = await User.create({
       email: 'eve@evie.com',
       password: 'Puppies',
-      role: 'user'
     });
 
     const agent = request.agent(app);

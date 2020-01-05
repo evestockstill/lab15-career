@@ -1,7 +1,4 @@
-// import app from '../lib/app.js';
-// const app  = new App()
-// const element = app.renderDOM();
-// document.body.prepend(element);
+
 
 const root = document.getElementById('root');
 
@@ -55,10 +52,22 @@ fetch('/api/v1/auth/verify', {
 })
   .then(res => res.json())
   .then(user => {
-    if (user._id) {
+    if(user._id) {
       displayUser(user);
     } else {
       displayForm();
     }
   });
-  
+fetch('/api/v1/auth/verify', {
+  credentials: 'include'
+})
+  .then(res => res.json())
+  .then(user => {
+    if (user._id) {
+      window.location.href = '/index.html';
+    } else {
+      displayLogin();
+    }
+  });
+
+
